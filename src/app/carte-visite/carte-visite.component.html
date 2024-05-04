@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="form-container">
+
+        <form class="contact-form">
+            <h1>Formulaire pour une carte visite</h1>
+<br>
+            <div class="form-group">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" [(ngModel)]="carteVisite.nom" required>
+            </div>
+           
+            <div class="form-group">
+                <label for="prenom">Prénom:</label>
+                <input type="text" id="prenom" name="prenom" [(ngModel)]="carteVisite.prenom" required>
+            </div>
+           
+            <div class="form-group">
+                <label for="entreprise">Entreprise:</label>
+                <input type="text" id="entreprise" name="entreprise" [(ngModel)]="carteVisite.entreprise">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" [(ngModel)]="carteVisite.email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telephone">Téléphone:</label>
+                <input type="tel" id="telephone" name="telephone" [(ngModel)]="carteVisite.telephone">
+            </div>
+            
+            <button type="submit" (ngSubmit)="onSubmit()" class="submit-btn">Enregistrer</button>
+        </form>
+    </div>
+
+    <div class="result-container">
+        <div class="card">
+            <h1>Carte Visite</h1>
+            <p><strong>Nom:</strong> {{ carteVisite.nom }}</p>
+            <p><strong>Prénom:</strong> {{ carteVisite.prenom }}</p>
+            <p><strong>Entreprise:</strong> {{ carteVisite.entreprise }}</p>
+            <p><strong>Email:</strong> {{ carteVisite.email }}</p>
+            <p><strong>Téléphone:</strong> {{ carteVisite.telephone }}</p>
+        </div>
+    </div>
+</div>
